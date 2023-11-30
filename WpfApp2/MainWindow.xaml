@@ -8,12 +8,12 @@
         Title="MainWindow" 
         MinWidth="400"
         Height="600"
-        Width="500"
+        Width="1000"
         >
    
         <!--<ScrollViewer  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" MinWidth="300" Width="auto" Height="auto">-->
             
-            <local:cardstack/>
+            <local:cardstack />
         <!--</ScrollViewer>-->
 
 

@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp2"
              mc:Ignorable="d" 
-             Height="250"
+             MinHeight="250"
              MinWidth="300"
              Width="auto"
+             Height="auto"
              x:Name="root"
             
              >
@@ -17,7 +18,7 @@
     <StackPanel Background="red">
 
 
-            <StackPanel >
+            <StackPanel Width="auto" Background="Black">
                 <StackPanel.Style>
                     <Style TargetType="StackPanel">
                         <Style.Triggers>
@@ -27,13 +28,14 @@
                         </Style.Triggers>
                     </Style>
                 </StackPanel.Style>
-            
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-            </StackPanel>
+            <Button Style="{StaticResource TransparentButton}">
+                
+                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the ooowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
+            </Button>
+                
+             </StackPanel>
 
-            <StackPanel>
+            <StackPanel Width="auto" Background="blue">
                 <StackPanel.Style>
                     <Style TargetType="StackPanel">
                         <Style.Triggers>
@@ -43,10 +45,11 @@
                         </Style.Triggers>
                     </Style>
                 </StackPanel.Style>
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the gowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-            </StackPanel>
+                <Button Style="{StaticResource TransparentButton}">
+
+                    <local:card AuthorNickName="ajsksadjklasdl" TrackName="the ooowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
+                </Button>
+        </StackPanel>
       
 
 
