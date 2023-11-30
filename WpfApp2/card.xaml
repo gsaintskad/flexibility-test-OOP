@@ -5,16 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp2"
              mc:Ignorable="d" 
-             Height="125"
+             MinHeight="125"
              MinWidth="300"
-             MaxWidth="1000"
-             Width="auto"
+             
+            
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              >
-   
-        <Border  Background="#7F808080" Width="auto" Padding="5" CornerRadius="25" >
-           
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+
+
+    
+        
+           <StackPanel Width="auto" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
                         <!-- miejsce dla zdjęcia konta użytkownika-->
                         <Grid>
 
@@ -26,8 +27,9 @@
                             <!--text blok dla informowania użytkownika o jakichś ważnych rzeczy-->
                             <TextBlock x:Name="FAPanel_author_nickname_mbox" Text="{Binding AuthorNickName}" FontSize="20" VerticalAlignment="Top" Foreground="#7FFFFFFF" Margin="10 0 0 0"/>
                         </StackPanel>
-                    </StackPanel>
+           </StackPanel>
                
-        </Border>
+  
+       
 
 </UserControl>

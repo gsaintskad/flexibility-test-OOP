@@ -15,45 +15,26 @@
     <UserControl.Resources>
         <local:GreatherThanConverter x:Key="GreatherThanConverter"/>
     </UserControl.Resources>
-    <StackPanel Background="red">
-
-
-            <StackPanel Width="auto" Background="Black">
-                <StackPanel.Style>
-                    <Style TargetType="StackPanel">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding ActualWidth, ElementName=root, Converter={StaticResource GreatherThanConverter}, ConverterParameter=600 }" Value="True">
-                                <Setter Property="Orientation" Value="Horizontal"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </StackPanel.Style>
-            <Button Style="{StaticResource TransparentButton}">
-                
-                <local:card AuthorNickName="ajsksadjklasdl" TrackName="the ooowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
+    <StackPanel x:Name="mainSP" Width="{Binding ElementName=root, Path=Width}" Background="red" SizeChanged="mainSP_SizeChanged"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <StackPanel x:Name="leftSP" MinWidth="500"  Background="Black" VerticalAlignment="Center" HorizontalAlignment="Left">
+            
+            
+            <Button>
+                <local:card x:Name="c00" AuthorNickName="Akiaura" TrackName="Sleepwalker 00" SourceOfImage="preview.jpg" Background="Blue"/>
             </Button>
-                
-             </StackPanel>
+            
+            
+            <local:card x:Name="c01" AuthorNickName="Akiaura" TrackName="Sleepwalker 01" SourceOfImage="preview.jpg" Background="#FF3E3E69"/>
+            <local:card x:Name="c02" AuthorNickName="Akiaura" TrackName="Sleepwalker 02" SourceOfImage="preview.jpg" Background="DeepSkyBlue"/>
 
-            <StackPanel Width="auto" Background="blue">
-                <StackPanel.Style>
-                    <Style TargetType="StackPanel">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding ActualWidth, ElementName=root, Converter={StaticResource GreatherThanConverter}, ConverterParameter=600 }" Value="True">
-                                <Setter Property="Orientation" Value="Horizontal"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </StackPanel.Style>
-                <Button Style="{StaticResource TransparentButton}">
-
-                    <local:card AuthorNickName="ajsksadjklasdl" TrackName="the ooowno" SourceOfImage="IMG_7173.PNG" Width="auto"/>
-                </Button>
         </StackPanel>
-      
+        <StackPanel x:Name="rightSP" MinWidth="500" SizeChanged="rightSP_SizeChanged"  Background="Black" VerticalAlignment="Center" HorizontalAlignment="Left">
+           
+            <local:card x:Name="c10" AuthorNickName="Akiaura" TrackName="Sleepwalker 10" SourceOfImage="preview.jpg" Background="#FF2828CA"/>
+            <local:card x:Name="c11" AuthorNickName="Akiaura" TrackName="Sleepwalker 11" SourceOfImage="preview.jpg" Background="#FF25259A"/>
+            <local:card x:Name="c12" AuthorNickName="Akiaura" TrackName="Sleepwalker 12" SourceOfImage="preview.jpg" Background="#FF78C7E2"/>
 
-
-
+        </StackPanel>
 
     </StackPanel>
 </UserControl>

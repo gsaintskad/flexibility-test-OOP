@@ -25,9 +25,45 @@ namespace WpfApp2
             InitializeComponent();
         }
 
-        private void card_StylusOutOfRange(object sender, StylusEventArgs e)
-        {
 
+        private void mainSP_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+                
+                rightSP.Width = root.Width;
+                leftSP.Width = root.Width;
+            if (root.Width > 900)
+            {
+                rightSP.Orientation = Orientation.Horizontal;
+                leftSP.Orientation = Orientation.Horizontal;
+            } 
+            else
+            {
+                rightSP.Orientation=Orientation.Vertical;
+                leftSP.Orientation=Orientation.Vertical;
+            }
+                rightSP_SizeChanged(sender,e);
+        }
+
+        private void rightSP_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (root.Width > 900)
+            {
+                c00.Width = root.Width / 3;
+                c01.Width = root.Width / 3;
+                c02.Width = root.Width / 3;
+                c10.Width = root.Width / 3;
+                c11.Width = root.Width / 3;
+                c12.Width = root.Width / 3;
+            }
+            else
+            {
+                c00.Width = root.Width;
+                c01.Width = root.Width;
+                c02.Width = root.Width;
+                c10.Width = root.Width;
+                c11.Width = root.Width;
+                c12.Width = root.Width;
+            }
         }
     }
 }

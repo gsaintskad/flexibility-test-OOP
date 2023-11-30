@@ -9,12 +9,15 @@
         MinWidth="400"
         Height="600"
         Width="1000"
+        x:Name="mainW"
         >
-   
-        <!--<ScrollViewer  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" MinWidth="300" Width="auto" Height="auto">-->
-            
-            <local:cardstack />
-        <!--</ScrollViewer>-->
+
+    <!--<ScrollViewer  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" MinWidth="300" Width="auto" Height="auto">-->
+
+
+    <local:cardstack Width="{Binding ElementName=mainW,Path=Width}"/>
+
+    <!--</ScrollViewer>-->
 
 
 </Window>
