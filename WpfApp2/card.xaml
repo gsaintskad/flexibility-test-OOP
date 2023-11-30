@@ -9,12 +9,13 @@
              MinWidth="300"
              
             
-             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}" Foreground="#66000000"
              >
 
 
-    
-        
+
+        <Border Background="#99000000" CornerRadius="10" Margin="5" Padding="10 0 10 0">
+            
            <StackPanel Width="auto" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
                         <!-- miejsce dla zdjęcia konta użytkownika-->
                         <Grid>
@@ -29,6 +30,7 @@
                         </StackPanel>
            </StackPanel>
                
+        </Border>
   
        
 

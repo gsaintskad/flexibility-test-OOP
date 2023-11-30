@@ -10,12 +10,18 @@
         Height="600"
         Width="1000"
         x:Name="mainW"
+     
         >
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        
 
-    <!--<ScrollViewer  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" MinWidth="300" Width="auto" Height="auto">-->
+            <local:cardstack Width="{Binding ElementName=mainW,Path=Width}"/>
+        </ScrollViewer>
+       
+        
+    </Grid>
 
-
-    <local:cardstack Width="{Binding ElementName=mainW,Path=Width}"/>
 
     <!--</ScrollViewer>-->
 

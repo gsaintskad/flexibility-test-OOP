@@ -29,8 +29,10 @@ namespace WpfApp2
         private void mainSP_SizeChanged(object sender, SizeChangedEventArgs e)
         {
                 
-                rightSP.Width = root.Width;
-                leftSP.Width = root.Width;
+            rightSP.Width = root.Width-15;
+            leftSP.Width = root.Width-15;
+
+
             if (root.Width > 900)
             {
                 rightSP.Orientation = Orientation.Horizontal;
@@ -41,6 +43,9 @@ namespace WpfApp2
                 rightSP.Orientation=Orientation.Vertical;
                 leftSP.Orientation=Orientation.Vertical;
             }
+
+
+                //musze wywolywac ta funkcje przez bug zwiazany ze zmniejszeniem okna 
                 rightSP_SizeChanged(sender,e);
         }
 
@@ -48,21 +53,21 @@ namespace WpfApp2
         {
             if (root.Width > 900)
             {
-                c00.Width = root.Width / 3;
-                c01.Width = root.Width / 3;
-                c02.Width = root.Width / 3;
-                c10.Width = root.Width / 3;
-                c11.Width = root.Width / 3;
-                c12.Width = root.Width / 3;
+                c00.Width = rightSP.Width / 3;
+                c01.Width = rightSP.Width / 3;
+                c02.Width = rightSP.Width / 3;
+                c10.Width = rightSP.Width / 3;
+                c11.Width = rightSP.Width / 3;
+                c12.Width = rightSP.Width / 3;
             }
             else
             {
-                c00.Width = root.Width;
-                c01.Width = root.Width;
-                c02.Width = root.Width;
-                c10.Width = root.Width;
-                c11.Width = root.Width;
-                c12.Width = root.Width;
+                c00.Width = rightSP.Width;
+                c01.Width = rightSP.Width;
+                c02.Width = rightSP.Width;
+                c10.Width = rightSP.Width;
+                c11.Width = rightSP.Width;
+                c12.Width = rightSP.Width;
             }
         }
     }
