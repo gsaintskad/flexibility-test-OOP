@@ -23,6 +23,8 @@ namespace WpfApp2
         public cardstack()
         {
             InitializeComponent();
+
+          //  root.AddChild(new card();
         }
 
 
