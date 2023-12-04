@@ -24,53 +24,38 @@ namespace WpfApp2
         {
             InitializeComponent();
 
-          //  root.AddChild(new card();
+
+            // funkcja ktora bedzie pobierala info z DB
+            AddChildElements();
+            //  root.AddChild(new card();
         }
 
-
-        private void mainSP_SizeChanged(object sender, SizeChangedEventArgs e)
+        
+        private List<string> fill_list()
         {
-                
-            rightSP.Width = root.Width-15;
-            leftSP.Width = root.Width-15;
-
-
-            if (root.Width > 900)
+            var list = new List<string>();
+           for(int i = 0; i <50; i++) 
             {
-                rightSP.Orientation = Orientation.Horizontal;
-                leftSP.Orientation = Orientation.Horizontal;
-            } 
-            else
-            {
-                rightSP.Orientation=Orientation.Vertical;
-                leftSP.Orientation=Orientation.Vertical;
+                Random random = new Random();
+                list.Add(random.Next(1, 100).ToString());
             }
-
-
-                //musze wywolywac ta funkcje przez bug zwiazany ze zmniejszeniem okna 
-                rightSP_SizeChanged(sender,e);
+           return list;
         }
-
-        private void rightSP_SizeChanged(object sender, SizeChangedEventArgs e)
+       
+  
+        private void AddChildElements()
         {
-            if (root.Width > 900)
-            {
-                c00.Width = rightSP.Width / 3;
-                c01.Width = rightSP.Width / 3;
-                c02.Width = rightSP.Width / 3;
-                c10.Width = rightSP.Width / 3;
-                c11.Width = rightSP.Width / 3;
-                c12.Width = rightSP.Width / 3;
+            List<string> names = fill_list();
+            //mainSP.Children.Add(c);
+            foreach(string name in names)
+            {   
+           //     button.Click += () => { buttonclick(button); };
+                mainSP.Children.Add(new card(name));
+          
             }
-            else
-            {
-                c00.Width = rightSP.Width;
-                c01.Width = rightSP.Width;
-                c02.Width = rightSP.Width;
-                c10.Width = rightSP.Width;
-                c11.Width = rightSP.Width;
-                c12.Width = rightSP.Width;
-            }
+
         }
+        
+
     }
 }

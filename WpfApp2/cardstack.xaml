@@ -16,38 +16,8 @@
         <local:GreatherThanConverter x:Key="GreatherThanConverter"/>
     </UserControl.Resources>
     
-    <StackPanel x:Name="mainSP" Width="{Binding ElementName=root, Path=Width}" SizeChanged="mainSP_SizeChanged"  HorizontalAlignment="Center" VerticalAlignment="Center" >
-        <StackPanel x:Name="leftSP" VerticalAlignment="Center" HorizontalAlignment="Left">
-
-
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c00" AuthorNickName="Akiaura" TrackName="Sleepwalker 00" SourceOfImage="preview.jpg" />
-            </Button>
-
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c01" AuthorNickName="Akiaura" TrackName="Sleepwalker 01" SourceOfImage="preview.jpg" />
-            </Button>
-            
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c02" AuthorNickName="Akiaura" TrackName="Sleepwalker 02" SourceOfImage="preview.jpg"/>
-            </Button>
-
-        </StackPanel>
-        <StackPanel x:Name="rightSP"  SizeChanged="rightSP_SizeChanged"   VerticalAlignment="Center" HorizontalAlignment="Left">
-
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c10" AuthorNickName="Akiaura" TrackName="Sleepwalker 10" SourceOfImage="preview.jpg" />
-            </Button>
-            
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c11" AuthorNickName="Akiaura" TrackName="Sleepwalker 11" SourceOfImage="preview.jpg" />
-            </Button>
-
-            <Button Style="{StaticResource TransparentButton}" >
-                <local:card x:Name="c12" AuthorNickName="Akiaura" TrackName="Sleepwalker 12" SourceOfImage="preview.jpg" />
-            </Button>
-
-        </StackPanel>
+    <StackPanel x:Name="mainSP" Width="{Binding ElementName=root, Path=Width}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+      
 
     </StackPanel>
 </UserControl>

@@ -44,5 +44,28 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+        public card(string authorNickName)
+        {
+            this.AuthorNickName = authorNickName;
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //tutaj musi być request do bazy danych aby pobrać track
+
+             MessageBox.Show(this.AuthorNickName);
+        }
+
+        
+
+        private void myCard_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            cardBorder.Width=e.NewSize.Width;
+            horizontSP.Width=e.NewSize.Width;
+        }
+
+
+       
     }
 }

@@ -8,29 +8,32 @@
              MinHeight="125"
              MinWidth="300"
              
-            
+             x:Name="myCard"
              DataContext="{Binding RelativeSource={RelativeSource Self}}" Foreground="#66000000"
+             SizeChanged="myCard_SizeChanged"
              >
 
 
+        <Button x:Name="mainButton" Background="Transparent" Padding="0" Margin="0" Click="Button_Click" BorderBrush="Transparent">
 
-        <Border Background="#99000000" CornerRadius="10" Margin="5" Padding="10 0 10 0">
-            
-           <StackPanel Width="auto" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                        <!-- miejsce dla zdjęcia konta użytkownika-->
-                        <Grid>
+            <Border Background="#99000000" x:Name="cardBorder"  CornerRadius="10"  >
 
-                            <Image x:Name="FAPanel_author_img" Width="90" Height="90" Source="{Binding SourceOfImage}"/>
-                        </Grid>
-                        <StackPanel MinWidth="200">
-                            <TextBlock x:Name="FAPanel_track_name_mbox" Text="{Binding TrackName}" FontSize="30" VerticalAlignment="Top" Foreground="White" Margin="10 0 0 0" />
+                <StackPanel  Orientation="Horizontal" Width="auto" x:Name="horizontSP"  VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <!-- miejsce dla zdjęcia konta użytkownika-->
+                    <Grid>
 
-                            <!--text blok dla informowania użytkownika o jakichś ważnych rzeczy-->
-                            <TextBlock x:Name="FAPanel_author_nickname_mbox" Text="{Binding AuthorNickName}" FontSize="20" VerticalAlignment="Top" Foreground="#7FFFFFFF" Margin="10 0 0 0"/>
-                        </StackPanel>
-           </StackPanel>
-               
-        </Border>
+                        <Image x:Name="FAPanel_author_img" Width="90" Height="90" Source="{Binding SourceOfImage}"/>
+                    </Grid>
+                    <StackPanel MinWidth="200">
+                        <TextBlock x:Name="FAPanel_track_name_mbox" Text="{Binding TrackName}" FontSize="30" VerticalAlignment="Top" Foreground="White" Margin="10 0 0 0" />
+
+                        <!--text blok dla informowania użytkownika o jakichś ważnych rzeczy-->
+                        <TextBlock x:Name="FAPanel_author_nickname_mbox" Text="{Binding AuthorNickName}" FontSize="20" VerticalAlignment="Top" Foreground="#7FFFFFFF" Margin="10 0 0 0"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Border>
+        </Button>
   
        
 
