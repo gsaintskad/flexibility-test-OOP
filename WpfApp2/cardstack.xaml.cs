@@ -53,7 +53,16 @@ namespace WpfApp2
                 mainSP.Children.Add(new card(name));
           
             }
+            foreach (var item in mainSP.Children)
+            {
+              
+                if(item is card)
+                {
+                    card c=(card)item;
 
+                    c.TrackName = c.AuthorNickName;
+                }
+            }
         }
         
 
